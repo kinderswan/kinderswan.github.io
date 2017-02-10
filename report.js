@@ -4,6 +4,9 @@ this.Main = function(){
 Main.prototype.loadCode =  function(event, data){
 		var callback = event.data.callback;
 		var url = $(".cppFile").val();
+		if(url === ""){
+			return;
+		}
 		$.ajax({
 			url : url,
 			dataType: "text",
